@@ -1,18 +1,19 @@
 import { IRequest, IResponse } from '../protocols/http';
+import MissingParamError from '../errors/missing-param-errors';
 
 export default class SignUpController {
   handle(request: IRequest): IResponse {
     if (!request.body.name) {
       return {
         statusCode: 400,
-        body: new Error('Missing param: name'),
+        body: new MissingParamError('name'),
       };
     }
 
     if (!request.body.email) {
       return {
         statusCode: 400,
-        body: new Error('Missing param: email'),
+        body: new MissingParamError('email'),
       };
     }
 
