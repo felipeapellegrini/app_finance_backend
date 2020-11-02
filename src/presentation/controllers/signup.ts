@@ -4,7 +4,7 @@ import { badRequest } from '../helpers/http-helper';
 
 export default class SignUpController {
   handle(request: IRequest): IResponse {
-    const requiredFields = ['name', 'email'];
+    const requiredFields = ['name', 'email', 'password'];
 
     for (const field of requiredFields) {
       if (!request.body[field]) {
