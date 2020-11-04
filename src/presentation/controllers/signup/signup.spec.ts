@@ -242,7 +242,7 @@ describe('SignUp Controller', () => {
 
     const response = await sut.handle(request);
     expect(response.statusCode).toBe(200);
-    expect(await response.body).toEqual({
+    expect(response.body).toEqual({
       id: 'valid_id',
       name: 'valid_name',
       email: 'valid_email@mail.com',
