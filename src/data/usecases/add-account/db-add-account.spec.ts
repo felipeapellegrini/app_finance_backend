@@ -1,4 +1,5 @@
-import { Encrypter } from 'data/protocols/encrypter';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { Encrypter } from './db-add-account-protocols';
 import { DbAddAccount } from './db-add-account';
 
 const makeEncrypter = (): Encrypter => {
